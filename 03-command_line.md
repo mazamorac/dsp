@@ -19,22 +19,34 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+pwd
+mkdir <dir>
+rm -rf <dir>
+touch <file>
+rm <file>
+mv <oldname> <newname>
+ls -a
+cp -p <source> <destination>
+
+usual commands:
+alias lr="ls -lrt"
+
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
+`ls`  list files, simple
+`ls -a`  list all files, simple
+`ls -l`  list files, with permissions, dates and sizes
+`ls -lh`  list files -l, in human-readable metrics
+`ls -lah` list all as -lh
+`ls -t`  list all, sorting by modtime
+`ls -Glp`  no group names, long, trailing slash on dirs
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > (SIL)
 
 ---
 
@@ -42,7 +54,12 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -lrt (I always alias it to lr)
+-F classify
+-L deref symlinks
+-R recursive
+-S sort by size
+-X sort by extension
 
 ---
 
@@ -50,7 +67,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > takes STDIN words and forks another program repeatedly, passing input as command line parms.
+find -type f -name '*.py' | xargs head -10
+
 
  
 

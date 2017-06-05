@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both are ordered collections, lists are mutable, tuples are immutable.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists are ordered collections, sets are unordered, stricts sets (no dups). Sets are faster for finding elements, as they're hash tables.
 
 ---
 
@@ -28,7 +28,8 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> creation of anonymous functions. 
+outlist = sorted( inlist, key = lambda x: x[-1] ) # Order list of lists by last element of each list
 
 ---
 
@@ -36,7 +37,9 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Syntactic sugar for map, filter and grep[?].
+out = [ x+1 for x in list ]		is equivalent to	out = []; for x in list; out.append(x+1)		and to	out = map( list, lambda x: x+1 )
+out = [ x for x in list if x%2==0]	is equivalent to	out = []; for x in list; if x%2==0: out.append(x)	and to	out = map( list, lambda x: x%2==0)
 
 ---
 
